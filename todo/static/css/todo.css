@@ -1,0 +1,22 @@
+#row-nav {
+    height: 100%;
+}
+
+#show-link {
+    background-color: #343a40!important;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: wheat;
+}
+
+.container {
+    justify-content: space-around;
+    padding: 4rem;
+    text-align: left;
+}

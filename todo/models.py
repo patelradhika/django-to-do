@@ -5,7 +5,7 @@ class Todolist(models.Model):
     item = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     done = models.BooleanField(default=False)
-    completed_on = models.DateTimeField(null=True)
+    completed_on = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.item
