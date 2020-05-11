@@ -39,7 +39,7 @@ def delete(request, pk):
     return redirect('/')
 
 
-def completed(request, pk):
+def done(request, pk):
     task = Todolist.objects.get(pk=pk)
     task.done = True
     task.completed_on = datetime.now()
