@@ -3,14 +3,14 @@
 {% block content %}
 <div class="container">
     {% for task in tasks_done %}
-    <div class="row m-2 p-2" style="border: 1px solid;">
+    <div class="row m-2 p-2" style="background-color: #343a40!important;">
         <div class="col-11">
-            <a href="#" data-toggle="modal" data-target="#completed-modal-{{task.id}}">{{ task.item }}</a>
+            <a href="#" class="nav-link" data-toggle="modal" data-target="#completed-modal-{{task.id}}">{{ task.item }}</a>
 
             {% include 'todo/completed-modal.html' %}
         </div>
 
-        <div class="col mt-1">
+        <div class="col p-3">
             <a href="{% url 'restore' pk=task.id %}" style="color: orange;"><i class="fas fa-window-restore"></i></i></a>
         </div>
     </div>
