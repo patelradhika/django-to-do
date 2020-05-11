@@ -46,3 +46,18 @@ def done(request, pk):
     task.save()
 
     return redirect('/')
+
+
+def completed(request):
+    tasks_done = Todolist.objects.filter(done=True)
+    frontend = {'tasks_done': tasks_done}
+    return render(request, 'todo/completed.html', frontend)
+
+
+def restore(request, pk):
+    task = Todolist.objects.get(pk=pk)
+    task.done = False
+    task.completed_on = None
+    task.save()
+
+    return redirect('/completed')
